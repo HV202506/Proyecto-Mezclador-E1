@@ -485,8 +485,11 @@ Configurar del siguiente modo:
 
 - Enviar mensaje al perfil nuevo del Bot, a través de telegram y visualizar la notificación en los mensajes de depuración.
 
+
   - Perfil
+    
   ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Bot%20de%20estado.png?raw=true)
+
 
   - Mensaje enviado
  
