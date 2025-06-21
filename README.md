@@ -436,8 +436,14 @@ Configurar del siguiente modo:
 
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/CREAR%20BASE%20DE%20DATOS%203.png?raw=true)
 
-# Resultados:
+## 4 Notificaciones a Telegram 
 
+4.1 Crear el Bot de telegram
+
+- 
+
+
+# Resultados:
 
 
 ## Dashboard:
@@ -452,10 +458,10 @@ Configurar del siguiente modo:
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/VACIANDO%201.png?raw=true)
 
 
-
 ## Alertas:
 
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/MENSAJES%20DE%20TELEGRAM.png?raw=true)
+
 
 ## Registro de base de datos:
 
