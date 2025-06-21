@@ -34,6 +34,7 @@ Adicionalmente se agregarán las siguientes características:
 - 1 led verde (Para representación visual del proceso de vaciado del tanque)
 - Simbolo GND
 - 5 resistecias de 200 ohms
+- Sensor DHT22
 
 # Desarrollo de la proyecto 
 
