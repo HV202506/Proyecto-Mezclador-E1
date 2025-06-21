@@ -556,9 +556,9 @@ return msg;
 
 Desarrollado por: 
 
-- Ing. Vega Rodríguez Héctor Angel
+- Ing. Vega Rodríguez Héctor Angel ![GitHub](https://github.com/HV202506)
 
-- Ing. Salas Chávez Luis Adrián
+- Ing. Salas Chávez Luis Adrián ![GitHub](https://github.com/AdrianSalasCh)
 
-- Ing. Cardoso Mota Irving Daniel 
+- Ing. Cardoso Mota Irving Daniel ![GitHub](https://github.com/IrvingM10)
 
