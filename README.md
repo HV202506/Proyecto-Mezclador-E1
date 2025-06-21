@@ -1,7 +1,7 @@
 # Proyecto-Mezclador-E1 (ESP32-LED-DHT22-HCSR04-NODERED-WSP) 
 
 # Introducción:
-Se desea realizar un sistema para proceso de mezcla y calentamiento de los siguientes elementos: Poliol e Isocianato.
+Se desea realizar un sistema para proceso de mezcla y calentamiento de los siguientes compuestos químicos: Poliol e Isocianato.
 
 Este proceso sucede en etapas, las cuales son:
 
@@ -11,7 +11,7 @@ Este proceso sucede en etapas, las cuales son:
 
 Adicionalmente se agregarán las siguientes características:
 
-- Descripción de las características de la mezcla dentro de una interfaz gráfica (DASHBOARD)
+- Representación de los datos recopilados por los sensores dentro de una interfaz gráfica (DASHBOARD)
 
 - Historial de los cambios dentro del tanque dentro de una base de datos (MySQL)
 
@@ -20,7 +20,7 @@ Adicionalmente se agregarán las siguientes características:
 
 # Material necesario
 
-- WOKWI (para simular las variables del proceso)
+- WOKWI (para programar las variables del proceso)
 - Una tarjeta ESP32 (para adquisición de datos)
 - Sensor ultrasónico "HC-SR04 Ultrasonic Distance Sensor"
 - Plataforma Node-RED conectada a un broker
@@ -29,6 +29,11 @@ Adicionalmente se agregarán las siguientes características:
 - 3 Bombas (una para cada fluido y otra para el vaciado del tanque)
 - Mezclador electromecánico (motor)
 - Calentador (eléctrico)
+- 2 led rojos (Para representación visual del proceso de llenado del tanque con las dos bombas)
+- 2 led amarillos (Para representación visual del proceso del mezclador y calentador)
+- 1 led verde (Para representación visual del proceso de vaciado del tanque)
+- Simbolo GND
+- 5 resistenica de 200 ohms
 
 # Desarrollo de la proyecto 
 
