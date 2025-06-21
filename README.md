@@ -20,21 +20,18 @@ Adicionalmente se agregarán las siguientes características:
 
 # Material necesario
 
-- WOKWI (para programar las variables del proceso)
-- Una tarjeta ESP32 (para adquisición de datos)
-- Sensor ultrasónico "HC-SR04 Ultrasonic Distance Sensor"
-- Plataforma Node-RED conectada a un broker
-- Entorno funcional dentro de Node-RED
-- XAMPP Control Panel (para Apache y MySQL)
-- 3 Bombas (una para cada fluido y otra para el vaciado del tanque)
-- Mezclador electromecánico (motor)
-- Calentador (eléctrico)
-- 2 led rojos (Para representación visual del proceso de llenado del tanque con las dos bombas)
-- 2 led amarillos (Para representación visual del proceso del mezclador y calentador)
-- 1 led verde (Para representación visual del proceso de vaciado del tanque)
-- Simbolo GND
-- 5 resistecias de 200 ohms
-- Sensor DHT22
+- WOKWI (para programar las variables del proceso).
+- Una tarjeta ESP32 (para adquisición de datos).
+- Sensor ultrasónico "HC-SR04 Ultrasonic Distance Sensor".
+- Sensor DHT22.
+- 2 led rojos (Para representación visual del proceso de llenado del tanque con las dos bombas).
+- 2 led amarillos (Para representación visual del proceso del mezclador y calentador).
+- 1 led verde (Para representación visual del proceso de vaciado del tanque).
+- Simbolo GND.
+- 5 resistecias de 200 ohms.
+- Plataforma Node-RED conectada a un broker.
+- Entorno funcional dentro de Node-RED.
+- XAMPP Control Panel (para Apache y MySQL).
 
 # Desarrollo de la proyecto 
 
