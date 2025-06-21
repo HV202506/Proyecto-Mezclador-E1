@@ -461,10 +461,14 @@ Configurar del siguiente modo:
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Conf%20Telegram%201.png?raw=true)
 
 
-- Enviar el siguiente mensaje:
+- Enviar los siguientes mensajes:
 
 ```
 /start
+```
+
+```
+/newbot
 ```
 
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Conf%20Telegram%202.png?raw=true)
