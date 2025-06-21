@@ -327,7 +327,9 @@ Se interconectaran los elementos tal cual se muestra en la siguiente imagen
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/TEMPERATURA.png?raw=true)
 
   ```
-
+msg.payload = msg.payload.TEMPERATURA;
+msg.topic = "TEMPERATURA";
+return msg;
   ```
   
 - function 2 (se empleara para la distancia)
@@ -335,7 +337,9 @@ Se interconectaran los elementos tal cual se muestra en la siguiente imagen
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/DISTANCIA.png?raw=true)
 
   ```
-
+msg.payload = msg.payload.DISTANCIA;
+msg.topic = "DISTANCIA";
+return msg;
   ```
   
 - function 3 (se empleara para el estado)
@@ -343,7 +347,9 @@ Se interconectaran los elementos tal cual se muestra en la siguiente imagen
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/ESTADO.png?raw=true)
 
   ```
-
+msg.payload = msg.payload.ESTADO;
+msg.topic = "ESTADO";
+return msg;
   ```
   
 - function 4 (se empleara para enviar informacion a la base de datos)
@@ -351,6 +357,12 @@ Se interconectaran los elementos tal cual se muestra en la siguiente imagen
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/BASE%20DE%20DATOS.png?raw=true)
 
   ```
+var query = "INSERT INTO `proyecto1`(`ID`, `FECHA`, `DEVICE`, `TEMPERATURA`, `DISTANCIA`) VALUES (NULL, current_timestamp(), '";
+query += msg.payload.DEVICE + "', '";
+query += msg.payload.TEMPERATURA + "', '";
+query += msg.payload.DISTANCIA + "');";
+msg.topic = query;
+return msg;
 
   ```
 
@@ -359,7 +371,12 @@ Se interconectaran los elementos tal cual se muestra en la siguiente imagen
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/EXT%20PARA%20TELEGRAM.png?raw=true)
 
   ```
-
+msg.payload = {
+    chatId: 5276504889,
+    type: "message",
+    content: msg.payload.ESTADO
+};
+return msg;
   ```
   
 - mysql (para guardar los eventos y las variables de estado)
@@ -410,7 +427,7 @@ Se interconectaran los elementos tal cual se muestra en la siguiente imagen
 
 ## Registro de base de datos:
 
-![](mysql resultados)
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/RESULTADOS%20BASE%20DE%20DATOS.png?raw=true)
 
 
 # Créditos
