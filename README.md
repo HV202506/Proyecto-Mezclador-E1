@@ -404,6 +404,37 @@ return msg;
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/TEXT%20ESTADO.png?raw=true)
 
 
+# 3 Base de datos
+
+## 3.1 Creacion de la base de datos:
+
+Con la herramienta de XAMPP Control data base ya instalada en el equipo:
+
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/XAMPP.png?raw=true)
+
+Iniciar los modulos (se muestran en la siguiente imagen):
+
+- Apache
+- MySQL
+
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/START%20APACHE%20Y%20MYSQL.png?raw=true)
+
+Abrir el apartado "Admin" (se muestra en la siguiente imagen):
+
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/ABRIR%20ADMIN.png?raw=true)
+
+Crear base nueva base de datos (la siguiente imagen es un ejemplo):
+
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/CREAR%20BASE%20DE%20DATOS%201.png?raw=true)
+
+Crear Tabla para guardar los datos con las siguientes caracteristicas:
+
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/CREAR%20BASE%20DE%20DATOS%202.png?raw=true)
+
+Configurar del siguiente modo:
+
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/CREAR%20BASE%20DE%20DATOS%203.png?raw=true)
+
 # Resultados:
 
 
