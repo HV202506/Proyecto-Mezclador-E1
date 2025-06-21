@@ -1,22 +1,22 @@
-# Proyecto-Mezclador-E1 (ESP32-LED-DHT22-HCSR04-NODERED-WSP)  (EDITANDO)
+# Proyecto-Mezclador-E1 (ESP32-LED-DHT22-HCSR04-NODERED-WSP) 
 
 # Introducción:
 Se desea realizar un sistema para relizar un proceso de mezcla de los siguientes elementos: a)[INSERTAR EL PRIMER ELEMENTO] y b)[INSERTAR EL SEGUNDO ELEMENTO], esto sucede en etapas las cuales son:
 
-1. Llenado de tanque
-2. Calentamiento y mezcla
-3. Vaciado de tanque
+1. Llenado de tanque (LLENANDO)
+2. Calentamiento y mezcla (MEZCLANDO)
+3. Vaciado de tanque (VACIANDO)
 
 Adicionalmente se agregaran las siguientes caracteristicas:
 
-- Descripcion de las caracteristicas de la mezcla dentro de una interfaz grafica DASHBOARD
+- Descripcion de las caracteristicas de la mezcla dentro de una interfaz grafica (DASHBOARD)
   
-- Historial de los cambios dentro del tanque dentro de una BASE DE DATOS MySQL
+- Historial de los cambios dentro del tanque dentro de una base de datos (MySQL)
 
-- Notificacion de la fase en la que se encuentra el proceso a traves de WHATSAPP BOT
+- Notificacion de la fase en la que se encuentra el proceso a traves de un mensajero en linea (TELEGRAM)
    
 
-# Material necesario (EDITANDO)
+# Material necesario
 
 - WOKWI (para simular las variables del proceso)
 - Una tarjeta ESP32 (para adquisicion de datos)
@@ -26,11 +26,12 @@ Adicionalmente se agregaran las siguientes caracteristicas:
 
 # Desarrollo de la proyecto 
 
-## 1 Entorno simulado (WOKWI) 
+## 1 Entorno simulado 
 
 ## 1.1 Codigo para el entorno simulado en WOKWI 
 
   ```
+
 #include <ArduinoJson.h>
 #include <WiFi.h>
 #include <PubSubClient.h>
@@ -181,7 +182,7 @@ void loop() {
     case LLENADO:
       digitalWrite(Bomba1, HIGH);
       digitalWrite(Bomba2, HIGH);
-      mensaje = ("LLENADO");
+      mensaje = ("LLENANDO");
       if (safetyDistance<= 100) { // Nivel alto alcanzado
         digitalWrite(Bomba1, LOW);
         digitalWrite(Bomba2, LOW);
@@ -192,7 +193,7 @@ void loop() {
     case MEZCLA:
       digitalWrite(Mezclador, HIGH);
       digitalWrite(Calentador, HIGH);
-      mensaje = ("MAZCLA");
+      mensaje = ("MEZCLANDO");
       if (data.temperature > 60) { // Temperatura objetivo
         digitalWrite(Mezclador, LOW);
         digitalWrite(Calentador, LOW);
@@ -202,7 +203,7 @@ void loop() {
 
     case VACIADO:
       digitalWrite(Bomba3, HIGH);
-      mensaje = ("VACIADO");
+      mensaje = ("VACIANDO");
       if (safetyDistance == 398) { // Tanque vacío
         digitalWrite(Bomba3, LOW);
         estado = LLENADO;
@@ -243,9 +244,10 @@ void loop() {
   }
 
 }
+
   ```
 
-## 1.2 Librerias empleadas para el entorno simulado en WOKWI (EDITANDO)
+## 1.2 Librerias empleadas para el entorno simulado en WOKWI
 
 Instalar las siguientes librerias
 
@@ -256,53 +258,147 @@ Instalar las siguientes librerias
 
 ![](LIBRERIAS)
 
-## 1.3 Hacer las conexiones entre los elementos del entorno simulado del siguiente modo como se muestra en la imagen (EDITANDO)
+## 1.3 Hacer las conexiones entre los elementos del entorno simulado del siguiente modo como se muestra en la imagen
 
 ![](CONEXIONES WOKWI)
 
-## 1.4 Intrucciones de operación (EDITANDO)
+## 1.4 Intrucciones de operación
 
 1. Iniciar la simulación.
 2. Observar el envio de los datos a traves del monitor serial.
-3. Variar los valores de la temperatura y distancia para observar que se actualizan adecuadamente
+3. Variar los valores de la temperatura y distancia para observar que se actualizan adecuadamente.
+4. Comprobar que las fases del proceso operen adecuadamente.
+   - Llenando
+   - Mezlando
+   - Vaciando
 
-# 2 Node-RED (EDITANDO)
+# 2 Node-RED
 
 ## 2.1 Dentro del Node-RED ya funcionando se agregara la siguiente libreria  (EDITANDO)
 
 - node-red-dashboard
-(INSERTAR PROCESO PARA ENCONTRALO)
+
+![](IMAGEN DEL DASHBOARD LIBRERIA ADD)
   
 - node-red-node-mysql
-(INSERTAR PROCESO PARA ENCONTRALO)
 
-- node-red-contrib-whatsapp-cmb
-(INSERTAR PROCESO PARA ENCONTRALO)
+![](IMAGEN MYSQL LIBRERIA ADD)
+
+- node-red-contrib-telegrambot
+
+![](IMAGEN TELEGRAMBOT LIBRERIA ADD)
 
 ## 2.2 Integrar en la interfaz los siguientes elementos (EDITANDO)
 
 - mqtt in (para hacer de entrada de dats)
 - json (para comunicacion entre aplicaciones web y servidores)
-- debug (para observar la informacion que se esta recibiendo)
+- debug 1 y 2 (para observar la informacion que se esta recibiendo)
 - function 1 (se empleara para la temperatura)
-- function 2 (se empleara para la humedad)
-- function 3 (se empleara para la distancia)
+- function 2 (se empleara para la distancia)
+- function 3 (se empleara para enviar informacion a la base de datos)
+- function 4 (se empleara para enviar mensaje a telegram)
+- mysql (para guardar los eventos y las variables de estado)
+- telegram sender (para enviar mensaje al char de Telegram)
 - chart 1 (se empleara para poder observar en graficos los cambios de las variables)
 - gauge 1 (temperatura)
-- gauge 2 (humedad)
-- gauge 3 (distancia)
+- gauge 2 (distancia)
+- text (para almacenar la variable estado)
 
 ## 2.3 Conexiones Node-RED
 
 Se interconectaran los elementos tal cual se muestra en la siguiente imagen
 
+- mqtt in (para hacer de entrada de dats)
+
 ![](CONEXIONES NODE-RED)
+
+- json (para comunicacion entre aplicaciones web y servidores)
+
+![](CONEXIONES NODE-RED)
+
+- debug 1 y 2 (para observar la informacion que se esta recibiendo)
+
+![](CONEXIONES NODE-RED)
+
+- function 1 (se empleara para la temperatura)
+
+![](CONEXIONES NODE-RED)
+
+  ```
+
+  ```
+  
+- function 2 (se empleara para la distancia)
+
+![](CONEXIONES NODE-RED)
+
+  ```
+
+  ```
+  
+- function 3 (se empleara para enviar informacion a la base de datos)
+
+![](CONEXIONES NODE-RED)
+
+  ```
+
+  ```
+  
+- function 4 (se empleara para enviar mensaje a telegram)
+
+![](CONEXIONES NODE-RED)
+
+  ```
+
+  ```
+  
+- mysql (para guardar los eventos y las variables de estado)
+
+![](CONEXIONES NODE-RED)
+
+- telegram sender (para enviar mensaje al char de Telegram)
+
+![](CONEXIONES NODE-RED)
+
+- chart 1 (se empleara para poder observar en graficos los cambios de las variables)
+
+![](CONEXIONES NODE-RED)
+
+- gauge 1 (temperatura)
+
+![](CONEXIONES NODE-RED)
+
+- gauge 2 (distancia)
+
+![](CONEXIONES NODE-RED)
+
+- text (para almacenar la variable estado)
+  
+![](CONEXIONES NODE-RED)
+
 
 ##  2.4 Configuraciones de los bloques de Node-RED
 
 - bloque (que hace el bloque)
 
-![](IMAGEN DEL BLOQUE)
+![](IMAGEN DE CADA BLOQUE PROGRAMACION)
+
+# Resultados:
+
+
+
+## Dashboard:
+
+![](dashboard reasultados)
+
+## Alertas:
+
+![](alertas telegram resultados)
+
+## Registro de base de datos:
+
+![](mysql resultados)
+
 
 # Créditos
 
