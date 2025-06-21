@@ -256,11 +256,11 @@ Instalar las siguientes librerias
 - WiFi
 - PubSubClient
 
-![](LIBRERIAS)
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/LIBRERIA.png?raw=true)
 
 ## 1.3 Hacer las conexiones entre los elementos del entorno simulado del siguiente modo como se muestra en la imagen
 
-![](CONEXIONES WOKWI)
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/CONEXIONES%20WOKWI.png?raw=true)
 
 ## 1.4 Intrucciones de operación
 
@@ -278,17 +278,17 @@ Instalar las siguientes librerias
 
 - node-red-dashboard
 
-![](IMAGEN DEL DASHBOARD LIBRERIA ADD)
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/ADD%20DASHBOARD.png?raw=true)
   
 - node-red-node-mysql
 
-![](IMAGEN MYSQL LIBRERIA ADD)
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/ADD%20MYSQL.png?raw=true)
 
 - node-red-contrib-telegrambot
 
-![](IMAGEN TELEGRAMBOT LIBRERIA ADD)
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/ADD%20TELEGRAM.png?raw=true)
 
-## 2.2 Integrar en la interfaz los siguientes elementos (EDITANDO)
+## 2.2 Integrar en la interfaz los siguientes elementos
 
 - mqtt in (para hacer de entrada de dats)
 - json (para comunicacion entre aplicaciones web y servidores)
@@ -304,25 +304,27 @@ Instalar las siguientes librerias
 - gauge 2 (distancia)
 - text (para almacenar la variable estado)
 
-## 2.3 Conexiones Node-RED
+## 2.3 Conexiones y codigo interno de las funciones Node-RED
 
 Se interconectaran los elementos tal cual se muestra en la siguiente imagen
 
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/CONEXIONES%20NODE-RED.png?raw=true)
+
 - mqtt in (para hacer de entrada de dats)
 
-![](CONEXIONES NODE-RED)
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/ADD%20MQTT.png?raw=true)
 
 - json (para comunicacion entre aplicaciones web y servidores)
 
-![](CONEXIONES NODE-RED)
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/JSON.png?raw=true)
 
 - debug 1 y 2 (para observar la informacion que se esta recibiendo)
 
-![](CONEXIONES NODE-RED)
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/DEBUG%201%20Y%202.png?raw=true)
 
 - function 1 (se empleara para la temperatura)
 
-![](CONEXIONES NODE-RED)
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/TEMPERATURA.png?raw=true)
 
   ```
 
@@ -330,23 +332,31 @@ Se interconectaran los elementos tal cual se muestra en la siguiente imagen
   
 - function 2 (se empleara para la distancia)
 
-![](CONEXIONES NODE-RED)
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/DISTANCIA.png?raw=true)
 
   ```
 
   ```
   
-- function 3 (se empleara para enviar informacion a la base de datos)
+- function 3 (se empleara para el estado)
 
-![](CONEXIONES NODE-RED)
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/ESTADO.png?raw=true)
 
   ```
 
   ```
   
-- function 4 (se empleara para enviar mensaje a telegram)
+- function 4 (se empleara para enviar informacion a la base de datos)
 
-![](CONEXIONES NODE-RED)
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/BASE%20DE%20DATOS.png?raw=true)
+
+  ```
+
+  ```
+
+- function 5 (se empleara para enviar mensaje a telegram)
+
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/EXT%20PARA%20TELEGRAM.png?raw=true)
 
   ```
 
@@ -354,34 +364,28 @@ Se interconectaran los elementos tal cual se muestra en la siguiente imagen
   
 - mysql (para guardar los eventos y las variables de estado)
 
-![](CONEXIONES NODE-RED)
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/MQTT.png?raw=true)
 
 - telegram sender (para enviar mensaje al char de Telegram)
 
-![](CONEXIONES NODE-RED)
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/SENDER%20TELEGRAM.png?raw=true)
 
 - chart 1 (se empleara para poder observar en graficos los cambios de las variables)
 
-![](CONEXIONES NODE-RED)
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/GRAFICOS.png?raw=true)
 
 - gauge 1 (temperatura)
 
-![](CONEXIONES NODE-RED)
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/TEMPERATURA.png?raw=true)
 
 - gauge 2 (distancia)
 
-![](CONEXIONES NODE-RED)
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/DISTANCIA.png?raw=true)
 
 - text (para almacenar la variable estado)
   
-![](CONEXIONES NODE-RED)
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/TEXT%20ESTADO.png?raw=true)
 
-
-##  2.4 Configuraciones de los bloques de Node-RED
-
-- bloque (que hace el bloque)
-
-![](IMAGEN DE CADA BLOQUE PROGRAMACION)
 
 # Resultados:
 
@@ -389,11 +393,20 @@ Se interconectaran los elementos tal cual se muestra en la siguiente imagen
 
 ## Dashboard:
 
-![](dashboard reasultados)
+- Llenando
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/LLENANDO%201.png?raw=true)
+
+- Mezclando
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/MEZCLANDO%201.png?raw=true)
+
+- Vaciando
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/VACIANDO%201.png?raw=true)
+
+
 
 ## Alertas:
 
-![](alertas telegram resultados)
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/MENSAJES%20DE%20TELEGRAM.png?raw=true)
 
 ## Registro de base de datos:
 
