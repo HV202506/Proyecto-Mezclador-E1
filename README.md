@@ -436,11 +436,64 @@ Configurar del siguiente modo:
 
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/CREAR%20BASE%20DE%20DATOS%203.png?raw=true)
 
-## 4 Notificaciones a Telegram 
+# 4 Notificaciones a Telegram 
 
-4.1 Crear el Bot de telegram
+## 4.1 Crear el Bot de telegram y obtener el Token HTTP API
 
-- 
+- Buscar dentro de Telegram el siguiente usuario
+
+```
+@BotFather
+```
+
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Conf%20Telegram%201.png?raw=true)
+
+
+- Enviar el siguiente mensaje:
+
+```
+/start
+```
+
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Conf%20Telegram%202.png?raw=true)
+
+- Asignar el nombre del bot que emplearas para tus actualizaciones (en este caso se uso el nombre AutomatedDipBoT), con esto se te asignara tu Token HTTP API
+
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Conf%20Telegram%203.png?raw=true)
+
+## 4.2 Obtener el ChatID (Reciviendo mensajes)
+- Crear el siguiente conjunto de nodos en Node-RED para obtener el ChatID que se empleara en la funcion que envia los mensajes de actualizacion de estado.
+
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Obtener%20ID%20de%20Chat%201.png?raw=true)
+
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Obtener%20ID%20de%20Chat%202.png?raw=true)
+
+- Enviar mensaje al perfil nuevo del Bot, a traves de telegram y visualizar la notificacion a traves de los mensajes de depuracion.
+
+  - Perfil
+  ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Bot%20de%20estado.png?raw=true)
+
+  - Mensaje enviado
+ 
+  ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Conf%20Telegram%205.png?raw=true)
+
+
+  - Mensaje de depuracion obteniedo en Node-RED
+ 
+  ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Conf%20Telegram%206.png?raw=true)
+
+  
+## 4.3 Enviando mensajes via Telegram
+
+- Crear el siguiende bloque de nodos conectados al archivo JSON
+
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Conf%20Telegram%207.png?raw=true)
+
+- Configurar la funcion del siguiente modo:
+
+![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Conf%20Telegram%208.png?raw=true)
+
+(Toda esta configuracion puede cambiar de acuerdo a los nombres utilizados tanto para el bot como para las variables, la base de datos y la tabla de la base de datos).
 
 
 # Resultados:
