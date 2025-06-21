@@ -503,7 +503,7 @@ Configurar del siguiente modo:
   
 ## 4.3 Enviando mensajes via Telegram
 
-- Crear el siguiende bloque de nodos conectados al archivo JSON
+- Crear el siguiende bloque de nodos conectados al módulo JSON
 
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Conf%20Telegram%207.png?raw=true)
 
