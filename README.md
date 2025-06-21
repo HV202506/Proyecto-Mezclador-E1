@@ -33,7 +33,7 @@ Adicionalmente se agregarán las siguientes características:
 - 2 led amarillos (Para representación visual del proceso del mezclador y calentador)
 - 1 led verde (Para representación visual del proceso de vaciado del tanque)
 - Simbolo GND
-- 5 resistenica de 200 ohms
+- 5 resistecias de 200 ohms
 
 # Desarrollo de la proyecto 
 
