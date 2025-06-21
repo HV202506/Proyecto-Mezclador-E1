@@ -1,7 +1,7 @@
 # Proyecto-Mezclador-E1 (ESP32-LED-DHT22-HCSR04-NODERED-WSP) 
 
 # Introducción:
-Se desea realizar un sistema para proceso de mezcla y calentamiento de los siguientes elementos: a) [INSERTAR EL PRIMER ELEMENTO] y b) [INSERTAR EL SEGUNDO ELEMENTO].
+Se desea realizar un sistema para proceso de mezcla y calentamiento de los siguientes elementos: Poliol e Isocianato.
 
 Este proceso sucede en etapas, las cuales son:
 
