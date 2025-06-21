@@ -416,6 +416,7 @@ Con la herramienta de XAMPP Control data base ya instalada en el equipo:
 Iniciar los modulos (se muestran en la siguiente imagen):
 
 - Apache
+  
 - MySQL
 
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/START%20APACHE%20Y%20MYSQL.png?raw=true)
@@ -489,9 +490,18 @@ Configurar del siguiente modo:
 
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Conf%20Telegram%207.png?raw=true)
 
-- Configurar la funcion del siguiente modo:
+- Configurar la funcion de la siguiente manera:
 
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Conf%20Telegram%208.png?raw=true)
+
+```
+msg.payload = {
+    chatId: 5276504889,
+    type: "message",
+    content: msg.payload.ESTADO
+};
+return msg;
+```
 
 (Toda esta configuracion puede cambiar de acuerdo a los nombres utilizados tanto para el bot como para las variables, la base de datos y la tabla de la base de datos).
 
@@ -502,12 +512,15 @@ Configurar del siguiente modo:
 ## Dashboard:
 
 - Llenando
+  
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/LLENANDO%201.png?raw=true)
 
 - Mezclando
+  
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/MEZCLANDO%201.png?raw=true)
 
 - Vaciando
+  
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/VACIANDO%201.png?raw=true)
 
 
