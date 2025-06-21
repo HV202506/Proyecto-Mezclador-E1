@@ -1,7 +1,9 @@
 # Proyecto-Mezclador-E1 (ESP32-LED-DHT22-HCSR04-NODERED-WSP) 
 
 # Introducción:
-Se desea realizar un sistema para relizar un proceso de mezcla de los siguientes elementos: a)[INSERTAR EL PRIMER ELEMENTO] y b)[INSERTAR EL SEGUNDO ELEMENTO], esto sucede en etapas las cuales son:
+Se desea realizar un sistema para proceso de mezcla y calentamiento de los siguientes elementos: a)[INSERTAR EL PRIMER ELEMENTO] y b)[INSERTAR EL SEGUNDO ELEMENTO].
+
+Este proceso sucede en etapas, las cuales son:
 
 1. Llenado de tanque (LLENANDO)
 2. Calentamiento y mezcla (MEZCLANDO)
@@ -24,6 +26,9 @@ Adicionalmente se agregaran las siguientes caracteristicas:
 - Plataforma Node-RED conectada a un broker
 - Entorno funcional dentro de Node-RED
 - XAMPP Control panel (para Apache y MySQL)
+- 3 Bombas (una para cada fluido y otra para el vaciado del tanque)
+- Mezclador electro-mecanico (motor)
+- Calentador (electrico)
 
 # Desarrollo de la proyecto 
 
