@@ -1,7 +1,7 @@
 # Proyecto-Mezclador-E1 (ESP32-LED-DHT22-HCSR04-NODERED-WSP) 
 
 # Introducción:
-Se desea realizar un sistema para proceso de mezcla y calentamiento de los siguientes elementos: a)[INSERTAR EL PRIMER ELEMENTO] y b)[INSERTAR EL SEGUNDO ELEMENTO].
+Se desea realizar un sistema para proceso de mezcla y calentamiento de los siguientes elementos: a) [INSERTAR EL PRIMER ELEMENTO] y b) [INSERTAR EL SEGUNDO ELEMENTO].
 
 Este proceso sucede en etapas, las cuales son:
 
@@ -9,32 +9,32 @@ Este proceso sucede en etapas, las cuales son:
 2. Calentamiento y mezcla (MEZCLANDO)
 3. Vaciado de tanque (VACIANDO)
 
-Adicionalmente se agregaran las siguientes caracteristicas:
+Adicionalmente se agregarán las siguientes características:
 
-- Descripcion de las caracteristicas de la mezcla dentro de una interfaz grafica (DASHBOARD)
-  
+- Descripción de las características de la mezcla dentro de una interfaz gráfica (DASHBOARD)
+
 - Historial de los cambios dentro del tanque dentro de una base de datos (MySQL)
 
-- Notificacion de la fase en la que se encuentra el proceso a traves de un mensajero en linea (TELEGRAM)
+- Notificación de la fase en la que se encuentra el proceso a través de un mensajero en línea (TELEGRAM)
    
 
 # Material necesario
 
 - WOKWI (para simular las variables del proceso)
-- Una tarjeta ESP32 (para adquisicion de datos)
-- Sensor ultrasonico "HC-SR04 Ultrasonic Distance Sensor" 
+- Una tarjeta ESP32 (para adquisición de datos)
+- Sensor ultrasónico "HC-SR04 Ultrasonic Distance Sensor"
 - Plataforma Node-RED conectada a un broker
 - Entorno funcional dentro de Node-RED
-- XAMPP Control panel (para Apache y MySQL)
+- XAMPP Control Panel (para Apache y MySQL)
 - 3 Bombas (una para cada fluido y otra para el vaciado del tanque)
-- Mezclador electro-mecanico (motor)
-- Calentador (electrico)
+- Mezclador electromecánico (motor)
+- Calentador (eléctrico)
 
 # Desarrollo de la proyecto 
 
 ## 1 Entorno simulado 
 
-## 1.1 Codigo para el entorno simulado en WOKWI 
+## 1.1 Código para el entorno simulado en WOKWI 
 
   ```
 
@@ -253,9 +253,9 @@ void loop() {
 
   ```
 
-## 1.2 Librerias empleadas para el entorno simulado en WOKWI
+## 1.2 Librerías empleadas para el entorno simulado en WOKWI
 
-Instalar las siguientes librerias
+Instalar las siguientes librerías
 
 - DHT sensor library for ESPx
 - ArduinoJson
@@ -271,16 +271,19 @@ Instalar las siguientes librerias
 ## 1.4 Intrucciones de operación
 
 1. Iniciar la simulación.
-2. Observar el envio de los datos a traves del monitor serial.
+2. Observar el envío de los datos a través del monitor serial.
 3. Variar los valores de la temperatura y distancia para observar que se actualizan adecuadamente.
-4. Comprobar que las fases del proceso operen adecuadamente.
-   - Llenando
-   - Mezlando
-   - Vaciando
+4. Comprobar que las fases del proceso operen adecuadamente:
+
+  - Llenando
+
+  - Mezclando
+
+  - Vaciando
 
 # 2 Node-RED
 
-## 2.1 Dentro del Node-RED ya funcionando se agregara la siguiente libreria  (EDITANDO)
+## 2.1 Dentro del Node-RED ya funcionando se agregará la siguiente librería 
 
 - node-red-dashboard
 
@@ -297,20 +300,20 @@ Instalar las siguientes librerias
 ## 2.2 Integrar en la interfaz los siguientes elementos
 
 - mqtt in (para hacer de entrada de dats)
-- json (para comunicacion entre aplicaciones web y servidores)
-- debug 1 y 2 (para observar la informacion que se esta recibiendo)
-- function 1 (se empleara para la temperatura)
-- function 2 (se empleara para la distancia)
-- function 3 (se empleara para enviar informacion a la base de datos)
-- function 4 (se empleara para enviar mensaje a telegram)
+- json (para comunicación entre aplicaciones web y servidores)
+- debug 1 y 2 (para observar la informacion que se está recibiendo)
+- function 1 (se empleará para la temperatura)
+- function 2 (se empleará para la distancia)
+- function 3 (se empleará para enviar informacion a la base de datos)
+- function 4 (se empleará para enviar mensaje a telegram)
 - mysql (para guardar los eventos y las variables de estado)
 - telegram sender (para enviar mensaje al char de Telegram)
-- chart 1 (se empleara para poder observar en graficos los cambios de las variables)
+- chart 1 (se empleará para poder observar en graficos los cambios de las variables)
 - gauge 1 (temperatura)
 - gauge 2 (distancia)
 - text (para almacenar la variable estado)
 
-## 2.3 Conexiones y codigo interno de las funciones Node-RED
+## 2.3 Conexiones y código interno de las funciones Node-RED
 
 Se interconectaran los elementos tal cual se muestra en la siguiente imagen
 
@@ -412,13 +415,13 @@ return msg;
 
 # 3 Base de datos
 
-## 3.1 Creacion de la base de datos:
+## 3.1 Creación de la base de datos:
 
 Con la herramienta de XAMPP Control data base ya instalada en el equipo:
 
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/XAMPP.png?raw=true)
 
-Iniciar los modulos (se muestran en la siguiente imagen):
+Iniciar los módulos (se muestran en la siguiente imagen):
 
 - Apache
   
@@ -434,7 +437,7 @@ Crear base nueva base de datos (la siguiente imagen es un ejemplo):
 
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/CREAR%20BASE%20DE%20DATOS%201.png?raw=true)
 
-Crear Tabla para guardar los datos con las siguientes caracteristicas:
+Crear Tabla para guardar los datos con las siguientes características:
 
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/CREAR%20BASE%20DE%20DATOS%202.png?raw=true)
 
@@ -463,18 +466,18 @@ Configurar del siguiente modo:
 
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Conf%20Telegram%202.png?raw=true)
 
-- Asignar el nombre del bot que emplearas para tus actualizaciones (en este caso se uso el nombre AutomatedDipBoT), con esto se te asignara tu Token HTTP API
+- Asignar el nombre del bot que emplearás para tus actualizaciones (en este caso se usó el nombre AutomatedDipBoT), con esto se te asignará tu Token HTTP API
 
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Conf%20Telegram%203.png?raw=true)
 
 ## 4.2 Obtener el ChatID (Reciviendo mensajes)
-- Crear el siguiente conjunto de nodos en Node-RED para obtener el ChatID que se empleara en la funcion que envia los mensajes de actualizacion de estado.
+- Crear el siguiente conjunto de nodos en Node-RED para obtener el ChatID que se empleará en la función que envía los mensajes de actualización de estado.
 
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Obtener%20ID%20de%20Chat%201.png?raw=true)
 
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Obtener%20ID%20de%20Chat%202.png?raw=true)
 
-- Enviar mensaje al perfil nuevo del Bot, a traves de telegram y visualizar la notificacion a traves de los mensajes de depuracion.
+- Enviar mensaje al perfil nuevo del Bot, a través de telegram y visualizar la notificación en los mensajes de depuración.
 
   - Perfil
   ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Bot%20de%20estado.png?raw=true)
@@ -484,7 +487,7 @@ Configurar del siguiente modo:
   ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Conf%20Telegram%205.png?raw=true)
 
 
-  - Mensaje de depuracion obteniedo en Node-RED
+  - Mensaje de depuración obtenido en Node-RED
  
   ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Conf%20Telegram%206.png?raw=true)
 
@@ -495,7 +498,7 @@ Configurar del siguiente modo:
 
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Conf%20Telegram%207.png?raw=true)
 
-- Configurar la funcion de la siguiente manera:
+- Configurar la función de la siguiente manera:
 
 ![](https://github.com/HV202506/Proyecto-Mezclador-E1-ESP32-LED-DHT22-HCSR04-NODERED-WSP-EDITANDO-/blob/main/Conf%20Telegram%208.png?raw=true)
 
@@ -508,7 +511,7 @@ msg.payload = {
 return msg;
 ```
 
-(Toda esta configuracion puede cambiar de acuerdo a los nombres utilizados tanto para el bot como para las variables, la base de datos y la tabla de la base de datos).
+(Toda esta configuración puede cambiar de acuerdo a los nombres utilizados tanto para el bot como para las variables, la base de datos y la tabla de la base de datos).
 
 
 # Resultados:
