@@ -23,6 +23,7 @@ Adicionalmente se agregaran las siguientes caracteristicas:
 - Sensor ultrasonico "HC-SR04 Ultrasonic Distance Sensor" 
 - Plataforma Node-RED conectada a un broker
 - Entorno funcional dentro de Node-RED
+- XAMPP Control panel (para Apache y MySQL)
 
 # Desarrollo de la proyecto 
 
